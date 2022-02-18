@@ -77,7 +77,6 @@ function patch {
 
 #Write your logic code here
 $win.AutoSize = $true
-cmd /c del "C:\minecraft-patcher\Are you sure you want to continue.exe"
 $uac = 0
 if ( (Get-ItemProperty HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System).EnableLUA -ne 1 ) {
 $uac = 1
