@@ -18,7 +18,7 @@ timeout /t 3 /nobreak >nul
 C:\minecraft-patcher\Unlocker\Unlocker.exe "C:\Windows\System32\Windows.ApplicationModel.Store.dll" -s -d
 del "C:\Windows\System32\Windows.ApplicationModel.Store.dll" 
 copy "C:\minecraft-patcher\dll\x64\System32\Windows.ApplicationModel.Store.dll" "C:\Windows\System32\Windows.ApplicationModel.Store.dll" 
-C:\minecraft-patcher\Unlocker\Unlocker.exe "C:\Windows\System32\Windows.ApplicationModel.Store.dll" -s -d
+C:\minecraft-patcher\Unlocker\Unlocker.exe "C:\Windows\SysWOW64\Windows.ApplicationModel.Store.dll" -s -d
 del "C:\Windows\SysWOW64\Windows.ApplicationModel.Store.dll" 
 copy "C:\minecraft-patcher\dll\x64\SysWOW64\Windows.ApplicationModel.Store.dll" "C:\Windows\SysWOW64\Windows.ApplicationModel.Store.dll" 
 explorer C:\minecraft-patcher\explorer.lnk

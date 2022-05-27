@@ -1,6 +1,4 @@
-
-
-Add-Type -Name Window -Namespace Console -MemberDefinition '
+﻿Add-Type -Name Window -Namespace Console -MemberDefinition '
 [DllImport("Kernel32.dll")]
 public static extern IntPtr GetConsoleWindow();
 
@@ -8,17 +6,13 @@ public static extern IntPtr GetConsoleWindow();
 public static extern bool ShowWindow(IntPtr hWnd, Int32 nCmdShow);'
 
 [Console.Window]::ShowWindow([Console.Window]::GetConsoleWindow(), 0)
-<# This form was created using POSHGUI.com  a free online gui designer for PowerShell
-.NAME
-    patcher
-#>
 
 Add-Type -AssemblyName System.Windows.Forms
 [System.Windows.Forms.Application]::EnableVisualStyles()
 
 $win                             = New-Object system.Windows.Forms.Form
 $win.ClientSize                  = New-Object System.Drawing.Point(490,340)
-$win.text                        = "Minecraft Patcher # By DiopinYT"
+$win.text                        = "Minecraft Patcher | By DiopinYT"
 $win.TopMost                     = $false
 $win.icon                        = "C:\minecraft-patcher\icon.ico"
 
@@ -53,7 +47,7 @@ $aa                              = New-Object system.Windows.Forms.Label
 $aa.AutoSize                     = $true
 $aa.width                        = 1
 $aa.height                       = 1
-$aa.location                     = New-Object System.Drawing.Point(489,339)
+$aa.location                     = New-Object System.Drawing.Point(488,338)
 $aa.Font                         = New-Object System.Drawing.Font('Microsoft Sans Serif',1)
 
 $win.controls.AddRange(@($BP,$SMB,$img,$SFB,$aa))
@@ -68,7 +62,7 @@ function start_fix {
     Start-Process 'conhost.exe' -Args 'C:\minecraft-patcher\fix.bat' -Verb RunAs
 }
 function start_minecraft { 
-    explorer.exe "C:\minecraft-patcher\minecraft.lnk"
+	Start-Process 'conhost.exe' -Args 'C:\minecraft-patcher\minecraft.bat' -Verb RunAs
 }
 function patch {
     Start-Process 'conhost.exe' -Args 'C:\minecraft-patcher\patch.bat' -Verb RunAs
